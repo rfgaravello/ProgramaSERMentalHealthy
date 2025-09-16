@@ -25,7 +25,8 @@ export default function App() {
       <header className="bg-white/60 backdrop-blur-md sticky top-0 z-40 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER</div>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER ET</div>
+			<img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop" alt="Momento de reflexão" className="w-full rounded-lg shadow" />
             <div>
               <h1 className="text-lg font-semibold">Programa SER</h1>
               <p className="text-xs text-slate-600">Sabedoria • Equilíbrio • Realidade</p>
