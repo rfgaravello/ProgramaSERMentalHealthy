@@ -25,7 +25,7 @@ export default function App() {
       <header className="bg-white/60 backdrop-blur-md sticky top-0 z-40 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER ET</div>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER</div>
 			<img src="/images/SERIcon.png" alt="" className="w-full rounded-lg shadow" />
             <div>
               <h1 className="text-lg font-semibold">Programa SER</h1>
