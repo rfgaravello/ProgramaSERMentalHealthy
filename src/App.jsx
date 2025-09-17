@@ -26,11 +26,11 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER</div>
-			<img src="/images/SERIcon.png" alt="" className="w-20 h-20"  />
-            <div>
+			 <div>
               <h1 className="text-lg font-semibold">Programa SER</h1>
               <p className="text-xs text-slate-600">Sabedoria • Equilíbrio • Realidade</p>
             </div>
+			<img src="/images/SERIcon.png" alt="" className="w-20 h-20"  />
           </div>
 
           <nav className="hidden md:flex gap-6 items-center text-sm">
