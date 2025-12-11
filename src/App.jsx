@@ -277,8 +277,8 @@ export default function App() {
             </ul>
 
             <div className="mt-6 grid grid-cols-1 gap-4">
-              <a href="#" className="block px-4 py-3 border rounded-lg">Solicitar PDF com apresentação</a>
-              <a href="#" className="block px-4 py-3 border rounded-lg">Solicitar proposta piloto</a>
+              <a href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER" className="block px-4 py-3 border rounded-lg">Solicitar PDF com apresentação</a>
+              <a href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER" className="block px-4 py-3 border rounded-lg">Solicitar proposta piloto</a>
             </div>
 
             <div className="mt-6 bg-gradient-to-r from-emerald-50 to-sky-50 rounded-lg p-4">
