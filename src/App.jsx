@@ -254,12 +254,12 @@ export default function App() {
     <br />
     LinkedIn:{" "}
     <a
-      href="https://www.linkedin.com/in/rafael-garavello"
+      href="https://www.linkedin.com/in/rafaelgaravello"
       target="_blank"
       rel="noreferrer"
       className="text-sky-600"
     >
-      rafael-garavello
+      rafaelgaravello
     </a>
   </p>
 </div>
