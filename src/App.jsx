@@ -220,8 +220,8 @@ export default function App() {
           </div>
 
           <div className="flex gap-4">
-            <a href="mailto:contato@programaser.com.br?subject=Quero%20saber%20mais%20sobre%20o%20Programa%20SER" className="bg-white text-sky-600 px-5 py-3 rounded-lg font-medium">Enviar email</a>
-            <a href="#contato" className="border border-white px-5 py-3 rounded-lg">Fale comigo</a>
+			  { /* <a href="mailto:contato@programaser.com.br?subject=Quero%20saber%20mais%20sobre%20o%20Programa%20SER" className="bg-white text-sky-600 px-5 py-3 rounded-lg font-medium">Enviar email</a> */}
+			    <a href="#contato" className="border border-white px-5 py-3 rounded-lg">Fale comigo</a>
           </div>
         </div>
       </section>
