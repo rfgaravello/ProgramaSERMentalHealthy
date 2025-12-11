@@ -78,7 +78,7 @@ export default function App() {
           </div>
 
           <div className="relative">
-            <img src="https://images.unsplash.com/photo-1523264766116-ef2be3b6b531?w=1400&q=80&auto=format&fit=crop" alt="Equipe em conversa e mindfulness" className="w-full rounded-2xl shadow-xl" />
+            <img src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1400&q=80&auto=format&fit=crop" alt="Equipe em conversa e mindfulness" className="w-full rounded-2xl shadow-xl" />
 
             <div className="mt-4 grid grid-cols-2 gap-4">
               <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop" alt="Momento de reflexão" className="w-full rounded-lg shadow" />
