@@ -231,29 +231,42 @@ export default function App() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-white rounded-2xl p-8 shadow">
             <h3 className="text-2xl font-bold">Contato</h3>
-            <p className="mt-3 text-slate-600">Preencha o formulário abaixo ou envie uma mensagem direta no LinkedIn.</p>
+            <p className="mt-3 text-slate-600">Envie mensagem pelo whatsapp ou  direta no LinkedIn.</p>
 
-            <form action="mailto:contato@programaser.com.br" method="post" encType="text/plain" className="mt-6 space-y-4">
-              <div>
-                <label className="text-sm text-slate-600">Nome</label>
-                <input name="Nome" required className="w-full mt-2 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-200" />
-              </div>
-              <div>
-                <label className="text-sm text-slate-600">Empresa</label>
-                <input name="Empresa" className="w-full mt-2 px-4 py-3 border rounded-lg" />
-              </div>
-              <div>
-                <label className="text-sm text-slate-600">Email</label>
-                <input type="email" name="Email" required className="w-full mt-2 px-4 py-3 border rounded-lg" />
-              </div>
-              <div>
-                <label className="text-sm text-slate-600">Mensagem</label>
-                <textarea name="Mensagem" rows="4" className="w-full mt-2 px-4 py-3 border rounded-lg" />
-              </div>
-              <div>
-                <button type="submit" className="bg-emerald-500 text-white px-6 py-3 rounded-lg">Enviar mensagem</button>
-              </div>
-            </form>
+<div className="mt-6 space-y-4">
+  <a
+    href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER."
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center justify-center gap-3 bg-emerald-500 text-white px-6 py-4 rounded-lg text-lg shadow hover:bg-emerald-600 transition"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+      className="w-6 h-6"
+    />
+    Falar pelo WhatsApp
+  </a>
+
+  <p className="text-sm text-slate-600 mt-4">
+    Ou, se preferir: <br />
+    Email:{" "}
+    <a href="mailto:contato@programaser.com.br" className="text-sky-600">
+      contato@programaser.com.br
+    </a>
+    <br />
+    LinkedIn:{" "}
+    <a
+      href="https://www.linkedin.com/in/rafael-garavello"
+      target="_blank"
+      rel="noreferrer"
+      className="text-sky-600"
+    >
+      rafael-garavello
+    </a>
+  </p>
+</div>
+
 
             <div className="mt-6 text-sm text-slate-600">
               <p>Email: <a href="mailto:contato@programaser.com.br" className="text-sky-600">contato@programaser.com.br</a></p>
