@@ -135,8 +135,8 @@ export default function App() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80&auto=format&fit=crop" alt="caminhada meditativa" className="w-full rounded-lg shadow" />
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80&auto=format&fit=crop" alt="mesa de reunião humanizada" className="w-full rounded-lg shadow" />
+              <img src="https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNhdWRlJTIwbWVudGFsfGVufDB8fDB8fHww?w=800&q=80&auto=format&fit=crop" alt="caminhada meditativa" className="w-full rounded-lg shadow" />
+              <img src="https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRlYW0lMjB3b3JrfGVufDB8fDB8fHww?w=800&q=80&auto=format&fit=crop" alt="mesa de reunião humanizada" className="w-full rounded-lg shadow" />
             </div>
           </div>
         </div>
