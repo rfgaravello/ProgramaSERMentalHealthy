@@ -81,8 +81,8 @@ export default function App() {
             <img src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1400&q=80&auto=format&fit=crop" alt="Equipe em conversa e mindfulness" className="w-full rounded-2xl shadow-xl" />
 
             <div className="mt-4 grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop" alt="Momento de reflexão" className="w-full rounded-lg shadow" />
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&auto=format&fit=crop" alt="Prática de respiração" className="w-full rounded-lg shadow" />
+              <img src="https://plus.unsplash.com/premium_photo-1711390047534-49fa467d891d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVzc29hJTIwcmVmbGV0aW5kb3xlbnwwfHwwfHx8MA%3D%3D?w=800&q=80&auto=format&fit=crop" alt="Momento de reflexão" className="w-full rounded-lg shadow" />
+              <img src="https://plus.unsplash.com/premium_photo-1667533288519-49d00a1620b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGxpYmVyZGFkZXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80&auto=format&fit=crop" alt="Prática de respiração" className="w-full rounded-lg shadow" />
             </div>
           </div>
         </div>
