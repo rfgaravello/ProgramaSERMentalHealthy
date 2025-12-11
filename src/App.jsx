@@ -41,7 +41,7 @@ export default function App() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="https://www.linkedin.com/in/rafael-garavello" target="_blank" rel="noreferrer" className="hidden md:inline-block text-sm px-4 py-2 border rounded-lg">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/rafaelgaravello/" target="_blank" rel="noreferrer" className="hidden md:inline-block text-sm px-4 py-2 border rounded-lg">LinkedIn</a>
             <a href="#contato" className="inline-block bg-sky-600 text-white px-4 py-2 rounded-lg text-sm shadow">Agende uma conversa</a>
           </div>
         </div>
