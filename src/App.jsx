@@ -250,10 +250,7 @@ export default function App() {
 
   <p className="text-sm text-slate-600 mt-4">
     Ou, se preferir: <br />
-    Email:{" "}
-    <a href="mailto:contato@programaser.com.br" className="text-sky-600">
-      contato@programaser.com.br
-    </a>
+ 
     <br />
     LinkedIn:{" "}
     <a
@@ -268,10 +265,7 @@ export default function App() {
 </div>
 
 
-            <div className="mt-6 text-sm text-slate-600">
-              <p>Email: <a href="mailto:contato@programaser.com.br" className="text-sky-600">contato@programaser.com.br</a></p>
-              <p className="mt-1">LinkedIn: <a href="https://www.linkedin.com/in/rafael-garavello" target="_blank" rel="noreferrer" className="text-sky-600">rafael-garavello</a></p>
-            </div>
+           
           </div>
 
           <div>
