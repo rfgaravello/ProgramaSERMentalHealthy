@@ -215,7 +215,7 @@ export default function App() {
       <section className="bg-sky-600 text-white py-12">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h4 className="text-2xl font-bold">Quer que sua empresa SER diferente?</h4>
+            <h4 className="text-2xl font-bold">Quer um novo ambiente leve e saudável para sua empresa "SER" diferente?</h4>
             <p className="mt-2 text-sm opacity-90">Agende uma conversa introdutória sem compromisso.</p>
           </div>
 
