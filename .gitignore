@@ -1,0 +1,14 @@
+.vercel
+.env*.local
+node_modules
+dist
+coverage
+*.log
+*.tsbuildinfo
+# Ignore IDE specific files
+.idea
+.vscode
+# Ignore OS specific files
+.DS_Store
+Thumbs.db
+

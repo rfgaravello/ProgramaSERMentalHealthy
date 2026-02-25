@@ -1,304 +1,252 @@
-/* App.jsx - Programa SER - ver instruções no topo do arquivo */
-/*
-Programa SER - Single-file React landing page
-Tech: React + Tailwind CSS
-
-Como usar:
-1) Crie um projeto React (Vite ou Create React App).
-   Ex: npm create vite@latest ser-site -- --template react
-2) Instale e configure TailwindCSS seguindo a docs do Tailwind.
-3) Copie este arquivo como src/App.jsx (ou adapte para seu roteamento).
-4) Adicione as imagens remotas (os links Unsplash já estão embutidos).
-5) Rode: npm install && npm run dev (Vite) ou npm start (CRA).
-
-Sugestões de deploy: Vercel, Netlify ou Cloudflare Pages.
-
-Obs: textos em português; classe de estilo usa Tailwind. Personalize cores e imagens conforme sua identidade visual.
-*/
-
 import React from "react";
+import ContactForm from "./ContactForm";
 
 export default function App() {
+
+  const whatsappNumber = "5519996210076";
+  const whatsappMessage = "Olá Rafael, gostaria de saber mais sobre o Programa SER.";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900 font-sans">
-      {/* Header */}
-      <header className="bg-white/60 backdrop-blur-md sticky top-0 z-40 shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-gradient-to-b from-[#140c1f] via-[#1b1230] to-[#0f0a1a] text-slate-100 font-sans">
+      {/* BOTÃO WHATSAPP FIXO */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-2xl z-50 transition-all duration-300"
+      >
+        WhatsApp
+      </a>
+
+      {/* HEADER */}
+      <header className="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl z-40 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold text-lg">SER</div>
-			 <div>
-              <h1 className="text-lg font-semibold">Programa SER</h1>
-              <p className="text-xs text-slate-600">Sabedoria • Equilíbrio • Realidade</p>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+              SER
             </div>
-			<img src="/images/SERIcon.png" alt="" className="w-20 h-20"  />
+            <span className="font-semibold tracking-wide text-lg">Programa SER</span>
+            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+            <img
+              src="/images/SERIcon.png"
+            
+            /> 
+            </div>
+         
           </div>
 
-          <nav className="hidden md:flex gap-6 items-center text-sm">
-            <a href="#sobre" className="hover:underline">Sobre</a>
-            <a href="#metodologia" className="hover:underline">Metodologia</a>
-            <a href="#beneficios" className="hover:underline">Benefícios</a>
-            <a href="#contato" className="text-sky-600 font-medium hover:underline">Contato</a>
-          </nav>
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/rafaelgaravello"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:block border border-slate-600 px-4 py-2 rounded-lg text-sm hover:border-emerald-400 transition"
+            >
+              LinkedIn
+            </a>
 
-          <div className="flex items-center gap-3">
-            <a href="https://www.linkedin.com/in/rafaelgaravello/" target="_blank" rel="noreferrer" className="hidden md:inline-block text-sm px-4 py-2 border rounded-lg">LinkedIn</a>
-            <a href="#contato" className="inline-block bg-sky-600 text-white px-4 py-2 rounded-lg text-sm shadow">Agende uma conversa</a>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-emerald-500 hover:bg-emerald-600 px-5 py-2 rounded-lg text-sm font-medium transition shadow-lg"
+            >
+              Falar no WhatsApp
+            </a>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">Expansão da consciência para ambientes de trabalho mais saudáveis</h2>
-            <p className="mt-6 text-lg text-slate-700">Mentoria e aconselhamento voltados para o bem-estar emocional, prevenção do burnout e a construção de uma cultura organizacional mais humana e resiliente.</p>
+      {/* HERO */}
+      <section className="pt-36 pb-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <p className="text-emerald-400 uppercase text-sm tracking-[0.2em]">
+            Mentoria de Desenvolvimento Humano
+          </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="#contato" className="inline-block bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium shadow">Agende uma conversa</a>
-              <a href="#metodologia" className="inline-block border border-slate-300 px-6 py-3 rounded-lg text-slate-700">Conheça a metodologia</a>
-            </div>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mt-6">
+            Consciência, Equilíbrio e
+            <span className="block text-emerald-400 mt-2">Responsabilidade</span>
+          </h1>
 
-            <div className="mt-8 grid grid-cols-3 gap-4">
-              <div className="p-4 bg-white rounded-lg shadow-sm">
-                <h4 className="text-sm font-semibold">Sabedoria</h4>
-                <p className="text-xs text-slate-600 mt-2">Estoicismo aplicado ao cotidiano corporativo.</p>
+          <p className="mt-8 text-lg text-slate-400 max-w-xl leading-relaxed">
+            Um processo estruturado de autoconhecimento aplicado à vida pessoal e profissional,
+            para quem deseja evoluir com clareza, maturidade emocional e decisões mais conscientes.
+          </p>
+
+          <div className="mt-12 flex flex-wrap gap-6">
+            <a
+              href="#contato"
+              className="bg-white text-slate-900 px-7 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition"
+            >
+              Solicitar Informações
+            </a>
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop"
+            alt="Equipe em conversa"
+            className="w-full rounded-3xl shadow-2xl"
+          />
+          <div className="mt-6 grid grid-cols-2 gap-4">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1711390047534-49fa467d891d?w=600&auto=format&fit=crop&q=60"
+              alt="Momento de reflexão"
+              className="w-full rounded-xl shadow-lg"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1667533288519-49d00a1620b2?w=600&auto=format&fit=crop&q=60"
+              alt="Clareza e foco"
+              className="w-full rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* MÉTODO */}
+      <section className="py-28 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold">O Método SER</h2>
+
+          <p className="mt-6 text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Uma abordagem estruturada de desenvolvimento humano voltada para ampliar clareza,
+            equilíbrio emocional e responsabilidade nas decisões do dia a dia.
+          </p>
+
+          <div className="mt-16 grid md:grid-cols-3 gap-10 text-left">
+
+            {[
+              {
+                title: "Sabedoria Prática",
+                text: "Desenvolvimento da capacidade de refletir antes de reagir, reconhecer padrões emocionais e tomar decisões com maior discernimento."
+              },
+              {
+                title: "Equilíbrio Emocional",
+                text: "Regulação emocional aplicada a situações reais da vida pessoal e profissional, fortalecendo estabilidade interna mesmo sob pressão."
+              },
+              {
+                title: "Responsabilidade Consciente",
+                text: "Assumir autoria sobre a própria trajetória, desenvolver comunicação madura e alinhar atitudes aos valores e objetivos."
+              }
+            ].map((item, index) => (
+              <div key={index} className="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl hover:border-emerald-400 transition duration-300 shadow-lg">
+                <h3 className="text-xl font-semibold text-emerald-400">{item.title}</h3>
+                <p className="mt-4 text-slate-400 leading-relaxed">{item.text}</p>
               </div>
-              <div className="p-4 bg-white rounded-lg shadow-sm">
-                <h4 className="text-sm font-semibold">Equilíbrio</h4>
-                <p className="text-xs text-slate-600 mt-2">Princípios de neurociência para regulação emocional.</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg shadow-sm">
-                <h4 className="text-sm font-semibold">Realidade</h4>
-                <p className="text-xs text-slate-600 mt-2">Mindfulness e práticas de presença.</p>
-              </div>
-            </div>
+            ))}
 
-            <p className="mt-6 text-xs text-slate-500">* Posicionamos o Programa SER como aconselhamento e mentoria — não substituímos serviços de psicoterapia ou psiquiatria.</p>
           </div>
 
-          <div className="relative">
-            <img src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1400&q=80&auto=format&fit=crop" alt="Equipe em conversa e mindfulness" className="w-full rounded-2xl shadow-xl" />
-
-            <div className="mt-4 grid grid-cols-2 gap-4">
-              <img src="https://plus.unsplash.com/premium_photo-1711390047534-49fa467d891d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVzc29hJTIwcmVmbGV0aW5kb3xlbnwwfHwwfHx8MA%3D%3D?w=800&q=80&auto=format&fit=crop" alt="Momento de reflexão" className="w-full rounded-lg shadow" />
-              <img src="https://plus.unsplash.com/premium_photo-1667533288519-49d00a1620b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fGxpYmVyZGFkZXxlbnwwfHwwfHx8MA%3D%3D?w=800&q=80&auto=format&fit=crop" alt="Prática de respiração" className="w-full rounded-lg shadow" />
-            </div>
+          {/* IMAGEM DO MÉTODO */}
+          <div className="mt-20 flex justify-center">
+            <img
+              src="/images/notebooklm_SER.png"
+              alt="Infográfico do Método SER"
+              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
+            />
           </div>
-        </div>
+         
 
-        {/* Decorative wave */}
-        <div className="absolute inset-x-0 bottom-0 -mb-1">
-          <svg viewBox="0 0 1440 60" className="w-full h-16" preserveAspectRatio="none">
-            <path d="M0 0h1440v40c-200 20-420 40-720 0C420 10 200 0 0 40z" fill="#ffffff"/>
-          </svg>
         </div>
       </section>
 
-      {/* Sobre */}
-      <section id="sobre" className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h3 className="text-3xl font-bold">O que é o Programa SER?</h3>
-            <p className="mt-4 text-slate-700">O Programa SER (Sistema de Expansão da Realidade) é uma abordagem integrativa de mentoria que une princípios do estoicismo, fundamentos de neurociência e práticas de mindfulness para promover bem-estar, resiliência e ambientes organizacionais éticos e compassivos.</p>
+      {/* FORMATO */}
+      <section className="py-28 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop"
+          alt="Reflexão"
+          className="rounded-3xl shadow-2xl"
+        />
 
-            <ul className="mt-6 space-y-3">
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-500 font-bold">•</span>
-                <div>
-                  <strong>Foco prático:</strong> Exercícios aplicáveis no dia a dia corporativo para regulação emocional e tomada de decisão com clareza.
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-500 font-bold">•</span>
-                <div>
-                  <strong>Não clínico:</strong> O programa é de aconselhamento e mentoria, destinado a apoiar o crescimento consciencial — não substitui terapia.
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-emerald-500 font-bold">•</span>
-                <div>
-                  <strong>Formato flexível:</strong> Workshops, sessões em grupo, mentorias para líderes e trilhas auto-guiadas.
-                </div>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <h2 className="text-3xl font-bold">Como Funciona</h2>
 
-          <div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h4 className="text-xl font-semibold">Quem conduz</h4>
-              <p className="mt-3 text-slate-600">Rafael Garavello — mentor e facilitador do Programa SER. Atua com práticas de autoconhecimento, filosofia aplicada e estratégias de bem-estar em organizações.</p>
+          <ul className="mt-10 space-y-4 text-slate-400 leading-relaxed">
+            <li>• Diagnóstico inicial de desafios e objetivos pessoais</li>
+            <li>• Sessões estruturadas de mentoria individual</li>
+            <li>• Aplicação prática no contexto real</li>
+            <li>• Plano de desenvolvimento contínuo</li>
+          </ul>
 
-              <div className="mt-6">
-                <a href="https://www.linkedin.com/in/rafael-garavello" target="_blank" rel="noreferrer" className="inline-block px-4 py-2 rounded-lg border">Perfil LinkedIn</a>
-              </div>
-            </div>
+          <div className="mt-12 flex gap-6">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-emerald-500 px-7 py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition"
+            >
+              Conversar agora
+            </a>
 
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              <img src="https://plus.unsplash.com/premium_photo-1664378616928-dc6842677183?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNhdWRlJTIwbWVudGFsfGVufDB8fDB8fHww?w=800&q=80&auto=format&fit=crop" alt="caminhada meditativa" className="w-full rounded-lg shadow" />
-              <img src="https://images.unsplash.com/photo-1681949103006-70066fb25dfe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRlYW0lMjB3b3JrfGVufDB8fDB8fHww?w=800&q=80&auto=format&fit=crop" alt="mesa de reunião humanizada" className="w-full rounded-lg shadow" />
-            </div>
+            <a
+              href="mailto:contato@programaser.com.br?subject=Quero saber mais sobre o Programa SER"
+              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
+            >
+              Enviar Email
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Metodologia */}
-      <section id="metodologia" className="bg-slate-50 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl font-bold">Metodologia</h3>
-          <p className="mt-4 text-slate-700">Nossa abordagem combina aprendizado conceitual e práticas experiencialess: workshops, exercícios de atenção plena, micro-hábitos baseados em neurociência e mentorias para lideranças.</p>
+      {/* CONTATO */}
+      <section id="contato" className="bg-slate-950 border-t border-slate-800 py-28">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center">Contato</h2>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">Workshops</h4>
-              <p className="mt-2 text-sm text-slate-600">Sessões interativas (2–4 horas) para equipes com exercícios práticos e discussões guiadas.</p>
+          <div className="mt-16 grid md:grid-cols-2 gap-12">
+            <ContactForm />
+
+            <div className="space-y-6">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="block bg-emerald-500 px-6 py-4 rounded-xl text-center shadow-lg hover:bg-emerald-600 transition"
+              >
+                Falar via WhatsApp
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/rafaelgaravello"
+                target="_blank"
+                rel="noreferrer"
+                className="block border border-slate-600 px-6 py-4 rounded-xl text-center hover:border-emerald-400 transition"
+              >
+                LinkedIn
+              </a>
+              <div className="w-30 h-30 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+            <img  src="/images/SERIcon.png"   
+            /> 
             </div>
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">Mentoria de Liderança</h4>
-              <p className="mt-2 text-sm text-slate-600">Programa de desenvolvimento para líderes focado em regulação emocional, comunicação e tomada de decisão ética.</p>
             </div>
-            <div className="p-6 bg-white rounded-2xl shadow">
-              <h4 className="font-semibold">Trilhas Auto-guiadas</h4>
-              <p className="mt-2 text-sm text-slate-600">Conteúdo estruturado para práticas semanais, com micro-exercícios e material de apoio.</p>
-            </div>
+
           </div>
 
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h5 className="font-semibold">Componentes base</h5>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>• Exercícios de atenção plena (mindfulness)</li>
-                <li>• Práticas estoicas aplicadas (reflexões, pre-mortem, dicotomias)</li>
-                <li>• Ferramentas de regulação emocional baseadas em neurociência</li>
-                <li>• Planos de ação individuais e para equipes</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow">
-              <h5 className="font-semibold">Métricas de impacto sugeridas</h5>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
-                <li>• Escalas de estresse percebido antes e depois</li>
-                <li>• NPS interno para programas de bem-estar</li>
-                <li>• Taxa de engajamento nas atividades</li>
-                <li>• Feedback qualitativo estruturado</li>
-              </ul>
-            </div>
-          </div>
+          <p className="mt-16 text-center text-sm text-slate-500">
+            Programa de mentoria voltado ao desenvolvimento pessoal e profissional.
+            Não se trata de atendimento clínico ou psicológico.
+          </p>
         </div>
+       
       </section>
-
-      {/* Benefícios */}
-      <section id="beneficios" className="max-w-6xl mx-auto px-6 py-16">
-        <h3 className="text-3xl font-bold">Benefícios para sua empresa</h3>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white rounded-2xl shadow">
-            <h4 className="font-semibold">Redução do burnout</h4>
-            <p className="mt-2 text-sm text-slate-600">Práticas preventivas que ajudam a diminuir esgotamento emocional.</p>
-          </div>
-          <div className="p-6 bg-white rounded-2xl shadow">
-            <h4 className="font-semibold">Maior engajamento</h4>
-            <p className="mt-2 text-sm text-slate-600">Colaboradores mais presentes e motivados em suas atividades.</p>
-          </div>
-          <div className="p-6 bg-white rounded-2xl shadow">
-            <h4 className="font-semibold">Liderança consciente</h4>
-            <p className="mt-2 text-sm text-slate-600">Líderes com ferramentas práticas para apoiar suas equipes.</p>
-          </div>
-        </div>
-
-        <div className="mt-10 bg-gradient-to-r from-emerald-50 to-sky-50 rounded-2xl p-8">
-          <h4 className="text-xl font-semibold">Oferta Corporativa (exemplo)</h4>
-          <p className="mt-2 text-slate-600 text-sm">Programa piloto de 8 semanas: 4 workshops + 4 sessões de mentoria de liderança + trilha auto-guiada. Relatório de impacto ao final.</p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-sky-600 text-white py-12">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h4 className="text-2xl font-bold">Quer um novo ambiente leve e saudável para sua empresa "SER" diferente?</h4>
-            <p className="mt-2 text-sm opacity-90">Agende uma conversa introdutória sem compromisso.</p>
-          </div>
-
-          <div className="flex gap-4">
-			  { /* <a href="mailto:contato@programaser.com.br?subject=Quero%20saber%20mais%20sobre%20o%20Programa%20SER" className="bg-white text-sky-600 px-5 py-3 rounded-lg font-medium">Enviar email</a> */}
-			    <a href="#contato" className="border border-white px-5 py-3 rounded-lg">Fale comigo</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contato */}
-      <section id="contato" className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="bg-white rounded-2xl p-8 shadow">
-            <h3 className="text-2xl font-bold">Contato</h3>
-            <p className="mt-3 text-slate-600">Envie mensagem pelo whatsapp ou  direta no LinkedIn.</p>
-
-<div className="mt-6 space-y-4">
-  <a
-    href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER."
-    target="_blank"
-    rel="noreferrer"
-    className="flex items-center justify-center gap-3 bg-emerald-500 text-white px-6 py-4 rounded-lg text-lg shadow hover:bg-emerald-600 transition"
-  >
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-      alt="WhatsApp"
-      className="w-6 h-6"
-    />
-    Falar pelo WhatsApp
-  </a>
-
-  <p className="text-sm text-slate-600 mt-4">
-    Ou, se preferir: <br />
- 
-    <br />
-    LinkedIn:{" "}
-    <a
-      href="https://www.linkedin.com/in/rafaelgaravello"
-      target="_blank"
-      rel="noreferrer"
-      className="text-sky-600"
-    >
-      rafaelgaravello
-    </a>
-  </p>
-</div>
-
-
-           
-          </div>
-
-          <div>
-            <h4 className="text-xl font-semibold">Recursos para começar</h4>
-            <ul className="mt-4 space-y-3 text-slate-600">
-              <li>• Material introdutório em PDF (podemos gerar o PDF com os slides).</li>
-              <li>• Mini-trilha de 4 semanas para times (checklist e micro-práticas).</li>
-              <li>• Relatório de resultados após piloto.</li>
-            </ul>
-
-            <div className="mt-6 grid grid-cols-1 gap-4">
-              <a href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER" className="block px-4 py-3 border rounded-lg">Solicitar PDF com apresentação</a>
-              <a href="https://wa.me/5519996210076?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20SER" className="block px-4 py-3 border rounded-lg">Solicitar proposta piloto</a>
-            </div>
-
-            <div className="mt-6 bg-gradient-to-r from-emerald-50 to-sky-50 rounded-lg p-4">
-              <p className="text-sm text-slate-600">Atenção: o Programa SER é aconselhamento e mentoria. Para casos clínicos procure profissionais de saúde mental qualificados.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-white border-t mt-12">
-        <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-slate-600">© {new Date().getFullYear()} Programa SER — Rafael Garavello</div>
-          <div className="flex items-center gap-4 text-sm">
-            <a href="#" className="hover:underline">Política de Privacidade</a>
-            <a href="#" className="hover:underline">Termos</a>
-          </div>
-        </div>
+    
+      {/* FOOTER */}
+      <footer className="bg-slate-950 border-t border-slate-800 py-10 text-center text-slate-500 text-sm">
+        © {new Date().getFullYear()} Programa SER — Rafael Garavello
       </footer>
+
     </div>
   );
 }
-
