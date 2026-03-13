@@ -35,9 +35,9 @@ export default function App() {
             </div>
          
           </div>
-          <span className="font-semibold tracking-wide text-lg">Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.</span>
+          <span className="block text-emerald-200 mt-2 text-[22px] bold ">Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.</span>
             
-          <div className="flex gap-4">
+          <div className="flex gap-14">
             <a
               href="https://www.linkedin.com/in/rafaelgaravello"
               target="_blank"
