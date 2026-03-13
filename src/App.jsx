@@ -149,12 +149,19 @@ export default function App() {
             ))}
 
           </div>
-
           {/* IMAGEM DO MÉTODO */}
           <div className="mt-20 flex justify-center">
             <img
               src="/images/notebooklm_SER.png"
               alt="Infográfico do Método SER"
+              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
+            />
+          </div>     
+          {/* IMAGEM DO MÉTODO */}
+          <div className="mt-20 flex justify-center">
+            <img
+              src="/images/Beneficios.png"
+              alt="Beneficios do Método SER"
               className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
             />
           </div>
