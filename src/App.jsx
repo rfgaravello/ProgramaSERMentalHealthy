@@ -9,6 +9,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#140c1f] via-[#1b1230] to-[#0f0a1a] text-slate-100 font-sans">
+      
       {/* BOTÃO WHATSAPP FIXO */}
       <a
         href={whatsappLink}
@@ -21,23 +22,34 @@ export default function App() {
 
       {/* HEADER */}
       <header className="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl z-40 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
+        
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+
+          <div className="flex items-center gap-3 justify-center md:justify-start">
+           
            {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
               SER
   </div> */}
-            <span className="font-semibold tracking-wide text-lg">Programa S.E.R.</span>
-            <div className="w-20 h-20 rounded-full overflow-hidden">
-            <img
-              src="/images/SERIcon.png" class="w-full h-full object-cover"
-            
-            /> 
+
+            <span className="font-semibold tracking-wide text-base md:text-lg text-center md:text-left">
+              Programa S.E.R.
+            </span>
+
+            <div className="w-12 h-12 md:w-20 md:h-20 rounded-full overflow-hidden">
+              <img
+                src="/images/SERIcon.png"
+                className="w-full h-full object-cover"
+              /> 
             </div>
          
           </div>
-          <span className="block text-emerald-200 mt-2 text-[22px] bold ">Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.</span>
+
+          <span className="block text-emerald-200 text-center md:text-left text-sm md:text-[22px] leading-snug px-2">
+            Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.
+          </span>
             
-          <div className="flex gap-14">
+          <div className="flex gap-4 justify-center md:justify-end flex-wrap">
+            
             <a
               href="https://www.linkedin.com/in/rafaelgaravello"
               target="_blank"
@@ -55,18 +67,19 @@ export default function App() {
             >
               Falar no WhatsApp
             </a>
+
           </div>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="pt-36 pb-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+      <section className="pt-48 md:pt-36 pb-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
         <div>
           <p className="text-emerald-400 uppercase text-sm tracking-[0.2em]">
             Mentoria de Desenvolvimento Humano
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mt-6">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-6">
             Consciência, Equilíbrio e
             <span className="block text-emerald-400 mt-2">Responsabilidade</span>
           </h1>
@@ -149,8 +162,8 @@ export default function App() {
             ))}
 
           </div>
+
           {/* IMAGEM DO MÉTODO */}
-         
           <div className="mt-20 flex justify-center">
             <img
               src="/images/notebooklm_SER.png"
@@ -158,28 +171,26 @@ export default function App() {
               className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
             />
           </div>    
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* IMAGEM DO Beneficios */}
-          <div className="mt-20 flex justify-left">
-            <img
-              src="/images/Beneficios.png"
-              alt="Beneficios do Método SER"
-              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
-            />
-            
-          </div>
-           {/* IMAGEM DO Beneficios */}
-           <div className="mt-20 flex justify-left">
-            <img
-              src="/images/Jornada.png"
-              alt="Jornada do Método SER"
-              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
-            />
-            
-          </div>
-        
 
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div className="mt-10 flex justify-center">
+              <img
+                src="/images/Beneficios.png"
+                alt="Beneficios do Método SER"
+                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
+              />
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <img
+                src="/images/Jornada.png"
+                alt="Jornada do Método SER"
+                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
+              />
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -201,7 +212,7 @@ export default function App() {
             <li>• Plano de desenvolvimento contínuo</li>
           </ul>
 
-          <div className="mt-12 flex gap-6">
+          <div className="mt-12 flex flex-wrap gap-6">
             <a
               href={whatsappLink}
               target="_blank"
@@ -230,6 +241,7 @@ export default function App() {
             <ContactForm />
 
             <div className="space-y-6">
+
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -247,12 +259,15 @@ export default function App() {
               >
                 LinkedIn
               </a>
-              <div className="w-50 h-50 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center ">
-            <img  src="/images/SERIcon.png" class="w-full h-full object-cover"
-            /> 
-            </div>
-            </div>
 
+              <div className="w-500 h-500mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center">
+                <img
+                  src="/images/SERIcon.png"
+                  className="w-full h-full object-cover"
+                /> 
+              </div>
+
+            </div>
           </div>
 
           <p className="mt-16 text-center text-sm text-slate-500">
@@ -260,9 +275,8 @@ export default function App() {
             Não se trata de atendimento clínico ou psicológico.
           </p>
         </div>
-       
       </section>
-    
+
       {/* FOOTER */}
       <footer className="bg-slate-950 border-t border-slate-800 py-10 text-center text-slate-500 text-sm">
         © {new Date().getFullYear()} Programa SER — Rafael Garavello
