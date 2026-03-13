@@ -35,7 +35,7 @@ export default function App() {
             </div>
          
           </div>
-          <span className="font-semibold tracking-wide text-lg">Sabedoria - Expansão Consciencial - Realidade desejada.</span>
+          <span className="font-semibold tracking-wide text-lg">Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.</span>
             
           <div className="flex gap-4">
             <a
