@@ -23,19 +23,20 @@ export default function App() {
       <header className="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl z-40 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+           {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
               SER
-            </div>
-            <span className="font-semibold tracking-wide text-lg">Programa SER</span>
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+  </div> */}
+            <span className="font-semibold tracking-wide text-lg">Programa S.E.R.</span>
+            <div className="w-20 h-20 rounded-full overflow-hidden">
             <img
-              src="/images/SERIcon.png"
+              src="/images/SERIcon.png" class="w-full h-full object-cover"
             
             /> 
             </div>
          
           </div>
-
+          <span className="font-semibold tracking-wide text-lg">Sabedoria - Expansão Consciencial - Realidade desejada.</span>
+            
           <div className="flex gap-4">
             <a
               href="https://www.linkedin.com/in/rafaelgaravello"
@@ -226,7 +227,7 @@ export default function App() {
               >
                 LinkedIn
               </a>
-              <div className="w-30 h-30 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+              <div className="w-50 h-50 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center ">
             <img  src="/images/SERIcon.png" class="w-full h-full object-cover"
             /> 
             </div>
