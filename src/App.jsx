@@ -175,7 +175,7 @@ export default function App() {
 
           <ul className="mt-10 space-y-4 text-slate-400 leading-relaxed">
             <li>• Diagnóstico inicial de desafios e objetivos pessoais</li>
-            <li>• Sessões estruturadas de mentoria individual</li>
+            <li>• Sessões estruturadas de mentoria individual ou em grupo</li>
             <li>• Aplicação prática no contexto real</li>
             <li>• Plano de desenvolvimento contínuo</li>
           </ul>
