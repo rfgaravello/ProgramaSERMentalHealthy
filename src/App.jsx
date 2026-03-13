@@ -227,7 +227,7 @@ export default function App() {
                 LinkedIn
               </a>
               <div className="w-30 h-30 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
-            <img  src="/images/SERIcon.png"   
+            <img  src="/images/SERIcon.png" class="w-full h-full object-cover"
             /> 
             </div>
             </div>
