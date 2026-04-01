@@ -219,67 +219,29 @@ export default function App() {
       </section>
  {/* VÍDEO APRESENTAÇÃO */}
  <section className="py-28 bg-slate-950 border-t border-slate-800">
-  <div className="max-w-5xl mx-auto px-6 text-center">
-    
-    <h2 className="text-3xl md:text-4xl font-bold">
-      Conheça o Programa SER
-    </h2>
-
-    <p className="mt-6 text-slate-400 max-w-2xl mx-auto">
-      Assista ao vídeo de apresentação e entenda como o processo pode transformar
-      sua forma de pensar, sentir e agir.
-    </p>
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold">Conheça o Programa SER</h2>
+          <p className="mt-6 text-slate-400 max-w-2xl mx-auto">Assista ao vídeo de apresentação e entenda como o processo pode transformar sua forma de pensar, sentir e agir.</p>
 
     {/* PLAYER YOUTUBE */}
     {/* PLAYER YOUTUBE VERTICAL */}
-<div className="mt-12 flex justify-center">
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId1}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-  <div>
-  </div>
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId2}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId3}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
+{/* AJUSTE AQUI: flex-col para mobile, md:flex-row para desktop */}
+<div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId1}`} frameBorder="0" allowFullScreen></iframe>
+            </div>
+            <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId2}`} frameBorder="0" allowFullScreen></iframe>
+            </div>
+            <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId3}`} frameBorder="0" allowFullScreen></iframe>
+            </div>
+          </div>
 
-    {/* BOTÃO CANAL */}
-    <div className="mt-10">
-      <a
-        href={youtubeChannelLink}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-block border border-slate-600 px-6 py-3 rounded-xl hover:border-emerald-400 transition"
-      >
-        Acessar Canal no YouTube
-      </a>
-    </div>
-
-  </div>
+          <div className="mt-10">
+            <a href={youtubeChannelLink} target="_blank" rel="noreferrer" className="inline-block border border-slate-600 px-6 py-3 rounded-xl hover:border-emerald-400 transition">Acessar Canal no YouTube</a>
+          </div>
+        </div>
 </section>
       {/* FORMATO */}
       <section className="py-28 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
