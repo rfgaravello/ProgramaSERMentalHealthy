@@ -228,13 +228,13 @@ export default function App() {
 {/* AJUSTE AQUI: flex-col para mobile, md:flex-row para desktop */}
 <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
             <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId1}`} frameBorder="0" allowFullScreen></iframe>
+              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId3}`} frameBorder="0" allowFullScreen></iframe>
             </div>
             <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
               <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId2}`} frameBorder="0" allowFullScreen></iframe>
             </div>
             <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId3}`} frameBorder="0" allowFullScreen></iframe>
+              <iframe className="absolute top-0 left-0 w-full h-full" src={`https://www.youtube.com/embed/${youtubeVideoId1}`} frameBorder="0" allowFullScreen></iframe>
             </div>
           </div>
 
