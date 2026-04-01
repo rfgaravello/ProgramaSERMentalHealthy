@@ -1,365 +1,374 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactForm from "./ContactForm";
 
 export default function App() {
-  const youtubeVideoId1 = "EC5RVeQ5jHM";
-  const youtubeVideoId2 = "Rv6HCIgpbGM";
-  const youtubeVideoId3 = "yXx-l3OIHmE";
-  const youtubeChannelLink = "https://www.youtube.com/@S.E.R.DesenvolvimentoHumano";
-  const whatsappNumber = "5519996210076";
-  const whatsappMessage = "Olá Rafael, gostaria de saber mais sobre o Programa SER.";
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  // ADIÇÃO GOOGLE TAG
+  useEffect(() => {
+    const script1 = document.createElement("script");
+    script1.async = true;
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-ESS1X306XQ";
+    document.head.appendChild(script1);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-[#140c1f] via-[#1b1230] to-[#0f0a1a] text-slate-100 font-sans">
-      
-      {/* BOTÃO WHATSAPP FIXO */}
-      <a
-        href={whatsappLink}
-        target="_blank"
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-2xl z-50 transition-all duration-300"
-      >
-        WhatsApp
-      </a>
+    const script2 = document.createElement("script");
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ESS1X306XQ');
+    `;
+    document.head.appendChild(script2);
+  }, []);
 
-      {/* HEADER */}
-      <header className="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl z-40 border-b border-slate-800">
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ESS1X306XQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  const youtubeVideoId1 = "EC5RVeQ5jHM";
+  const youtubeVideoId2 = "Rv6HCIgpbGM";
+  const youtubeVideoId3 = "yXx-l3OIHmE";
+  const youtubeChannelLink = "https://www.youtube.com/@S.E.R.DesenvolvimentoHumano";
+  const whatsappNumber = "5519996210076";
+  const whatsappMessage = "Olá Rafael, gostaria de saber mais sobre o Programa SER.";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-  gtag('config', 'G-ESS1X306XQ');
-</script>
-        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#140c1f] via-[#1b1230] to-[#0f0a1a] text-slate-100 font-sans">
+      
+      {/* BOTÃO WHATSAPP FIXO */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-full shadow-2xl z-50 transition-all duration-300"
+      >
+        WhatsApp
+      </a>
 
-          <div className="flex items-center gap-3 justify-center md:justify-start">
-           
-           {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
-              SER
-  </div> */}
+      {/* HEADER */}
+      <header className="fixed top-0 w-full bg-slate-950/70 backdrop-blur-xl z-40 border-b border-slate-800">
+        
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
-            <span className="font-semibold tracking-wide text-base md:text-lg text-center md:text-left">
-              Programa S.E.R.
-            </span>
+          <div className="flex items-center gap-3 justify-center md:justify-start">
+           
+           {/* <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white font-bold shadow-lg">
+              SER
+  </div> */}
 
-            <div className="w-12 h-12 md:w-20 md:h-20 rounded-full overflow-hidden">
-              <img
-                src="/images/SERIcon.png"
-                className="w-full h-full object-cover"
-              /> 
-            </div>
-         
-          </div>
+            <span className="font-semibold tracking-wide text-base md:text-lg text-center md:text-left">
+              Programa S.E.R.
+            </span>
 
-          <span className="block text-emerald-200 text-center md:text-left text-sm md:text-[22px] leading-snug px-2">
-            Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.
-          </span>
-            
-          <div className="flex gap-4 justify-center md:justify-end flex-wrap">
-            
-            <a
-              href="https://www.linkedin.com/in/rafaelgaravello"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden md:block border border-slate-600 px-4 py-2 rounded-lg text-sm hover:border-emerald-400 transition"
-            >
-              LinkedIn
-            </a>
+            <div className="w-12 h-12 md:w-20 md:h-20 rounded-full overflow-hidden">
+              <img
+                src="/images/SERIcon.png"
+                className="w-full h-full object-cover"
+              /> 
+            </div>
+         
+          </div>
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-emerald-500 hover:bg-emerald-600 px-5 py-2 rounded-lg text-sm font-medium transition shadow-lg"
-            >
-              Falar no WhatsApp
-            </a>
+          <span className="block text-emerald-200 text-center md:text-left text-sm md:text-[22px] leading-snug px-2">
+            Sabedoria - Equilibrio Emocional - Responsabilidade Consciente.
+          </span>
+            
+          <div className="flex gap-4 justify-center md:justify-end flex-wrap">
+            
+            <a
+              href="https://www.linkedin.com/in/rafaelgaravello"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:block border border-slate-600 px-4 py-2 rounded-lg text-sm hover:border-emerald-400 transition"
+            >
+              LinkedIn
+            </a>
 
-          </div>
-        </div>
-      </header>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-emerald-500 hover:bg-emerald-600 px-5 py-2 rounded-lg text-sm font-medium transition shadow-lg"
+            >
+              Falar no WhatsApp
+            </a>
 
-      {/* HERO */}
-      <section className="pt-48 md:pt-36 pb-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-       
-        
-        <div>
-          <p className="text-emerald-400 uppercase text-sm tracking-[0.2em]">
-            Mentoria de Desenvolvimento Humano
-          </p>
+          </div>
+        </div>
+      </header>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-6">
-            Consciência, Equilíbrio e
-            <span className="block text-emerald-400 mt-2">Responsabilidade</span>
-          </h1>
+      {/* HERO */}
+      <section className="pt-48 md:pt-36 pb-28 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+       
+        
+        <div>
+          <p className="text-emerald-400 uppercase text-sm tracking-[0.2em]">
+            Mentoria de Desenvolvimento Humano
+          </p>
 
-          <p className="mt-8 text-lg text-slate-400 max-w-xl leading-relaxed">
-            Um processo estruturado de autoconhecimento aplicado à vida pessoal e profissional,
-            para quem deseja evoluir com clareza, maturidade emocional e decisões mais conscientes.
-          </p>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-6">
+            Consciência, Equilíbrio e
+            <span className="block text-emerald-400 mt-2">Responsabilidade</span>
+          </h1>
 
-          <div className="mt-12 flex flex-wrap gap-6">
-            <a
-              href="#contato"
-              className="bg-white text-slate-900 px-7 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition"
-            >
-              Solicitar Informações
-            </a>
+          <p className="mt-8 text-lg text-slate-400 max-w-xl leading-relaxed">
+            Um processo estruturado de autoconhecimento aplicado à vida pessoal e profissional,
+            para quem deseja evoluir com clareza, maturidade emocional e decisões mais conscientes.
+          </p>
 
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
+          <div className="mt-12 flex flex-wrap gap-6">
+            <a
+              href="#contato"
+              className="bg-white text-slate-900 px-7 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition"
+            >
+              Solicitar Informações
+            </a>
 
-        <div>
-          <img
-            src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop"
-            alt="Equipe em conversa"
-            className="w-full rounded-3xl shadow-2xl"
-          />
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1711390047534-49fa467d891d?w=600&auto=format&fit=crop&q=60"
-              alt="Momento de reflexão"
-              className="w-full rounded-xl shadow-lg"
-            />
-            <img
-              src="https://plus.unsplash.com/premium_photo-1667533288519-49d00a1620b2?w=600&auto=format&fit=crop&q=60"
-              alt="Clareza e foco"
-              className="w-full rounded-xl shadow-lg"
-            />
-          </div>
-        </div>
-        
-      </section>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
 
-      {/* MÉTODO */}
-      <section className="py-28 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
-        
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold">O Método SER</h2>
+        <div>
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661277666101-01fb123f2a4c?q=80&w=1170&auto=format&fit=crop"
+            alt="Equipe em conversa"
+            className="w-full rounded-3xl shadow-2xl"
+          />
+          <div className="mt-6 grid grid-cols-2 gap-4">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1711390047534-49fa467d891d?w=600&auto=format&fit=crop&q=60"
+              alt="Momento de reflexão"
+              className="w-full rounded-xl shadow-lg"
+            />
+            <img
+              src="https://plus.unsplash.com/premium_photo-1667533288519-49d00a1620b2?w=600&auto=format&fit=crop&q=60"
+              alt="Clareza e foco"
+              className="w-full rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+        
+      </section>
 
-          <p className="mt-6 text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Uma abordagem estruturada de desenvolvimento humano voltada para ampliar clareza,
-            equilíbrio emocional e responsabilidade nas decisões do dia a dia.
-          </p>
+      {/* MÉTODO */}
+      <section className="py-28 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800">
+        
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold">O Método SER</h2>
 
-          <div className="mt-16 grid md:grid-cols-3 gap-10 text-left">
+          <p className="mt-6 text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Uma abordagem estruturada de desenvolvimento humano voltada para ampliar clareza,
+            equilíbrio emocional e responsabilidade nas decisões do dia a dia.
+          </p>
 
-            {[
-              {
-                title: "Sabedoria Prática",
-                text: "Desenvolvimento da capacidade de refletir antes de reagir, reconhecer padrões emocionais e tomar decisões com maior discernimento."
-              },
-              {
-                title: "Equilíbrio Emocional",
-                text: "Regulação emocional aplicada a situações reais da vida pessoal e profissional, fortalecendo estabilidade interna mesmo sob pressão."
-              },
-              {
-                title: "Responsabilidade Consciente",
-                text: "Assumir autoria sobre a própria trajetória, desenvolver comunicação madura e alinhar atitudes aos valores e objetivos."
-              }
-            ].map((item, index) => (
-              <div key={index} className="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl hover:border-emerald-400 transition duration-300 shadow-lg">
-                <h3 className="text-xl font-semibold text-emerald-400">{item.title}</h3>
-                <p className="mt-4 text-slate-400 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
+          <div className="mt-16 grid md:grid-cols-3 gap-10 text-left">
 
-          </div>
+            {[
+              {
+                title: "Sabedoria Prática",
+                text: "Desenvolvimento da capacidade de refletir antes de reagir, reconhecer padrões emocionais e tomar decisões com maior discernimento."
+              },
+              {
+                title: "Equilíbrio Emocional",
+                text: "Regulação emocional aplicada a situações reais da vida pessoal e profissional, fortalecendo estabilidade interna mesmo sob pressão."
+              },
+              {
+                title: "Responsabilidade Consciente",
+                text: "Assumir autoria sobre a própria trajetória, desenvolver comunicação madura e alinhar atitudes aos valores e objetivos."
+              }
+            ].map((item, index) => (
+              <div key={index} className="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-2xl hover:border-emerald-400 transition duration-300 shadow-lg">
+                <h3 className="text-xl font-semibold text-emerald-400">{item.title}</h3>
+                <p className="mt-4 text-slate-400 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
 
-          {/* IMAGEM DO MÉTODO */}
-          <div className="mt-20 flex justify-center">
-            <img
-              src="/images/notebooklm_SER.png"
-              alt="Infográfico do Método SER"
-              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
-            />
-          </div>    
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* IMAGEM DO MÉTODO */}
+          <div className="mt-20 flex justify-center">
+            <img
+              src="/images/notebooklm_SER.png"
+              alt="Infográfico do Método SER"
+              className="rounded-3xl shadow-2xl border border-slate-800 max-w-5xl w-full"
+            />
+          </div>    
 
-            <div className="mt-10 flex justify-center">
-              <img
-                src="/images/Beneficios.png"
-                alt="Beneficios do Método SER"
-                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-            <div className="mt-10 flex justify-center">
-              <img
-                src="/images/Jornada.png"
-                alt="Jornada do Método SER"
-                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
-              />
-            </div>
+            <div className="mt-10 flex justify-center">
+              <img
+                src="/images/Beneficios.png"
+                alt="Beneficios do Método SER"
+                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
+              />
+            </div>
 
-          </div>
-        </div>
-      </section>
- {/* VÍDEO APRESENTAÇÃO */}
- <section className="py-28 bg-slate-950 border-t border-slate-800">
-  <div className="max-w-5xl mx-auto px-6 text-center">
-    
-    <h2 className="text-3xl md:text-4xl font-bold">
-      Conheça o Programa SER
-    </h2>
+            <div className="mt-10 flex justify-center">
+              <img
+                src="/images/Jornada.png"
+                alt="Jornada do Método SER"
+                className="rounded-3xl shadow-2xl border border-slate-800 w-full"
+              />
+            </div>
 
-    <p className="mt-6 text-slate-400 max-w-2xl mx-auto">
-      Assista ao vídeo de apresentação e entenda como o processo pode transformar
-      sua forma de pensar, sentir e agir.
-    </p>
+          </div>
+        </div>
+      </section>
+ {/* VÍDEO APRESENTAÇÃO */}
+ <section className="py-28 bg-slate-950 border-t border-slate-800">
+  <div className="max-w-5xl mx-auto px-6 text-center">
+    
+    <h2 className="text-3xl md:text-4xl font-bold">
+      Conheça o Programa SER
+    </h2>
 
-    {/* PLAYER YOUTUBE */}
-    {/* PLAYER YOUTUBE VERTICAL */}
+    <p className="mt-6 text-slate-400 max-w-2xl mx-auto">
+      Assista ao vídeo de apresentação e entenda como o processo pode transformar
+      sua forma de pensar, sentir e agir.
+    </p>
+
+    {/* PLAYER YOUTUBE */}
+    {/* PLAYER YOUTUBE VERTICAL */}
 <div className="mt-12 flex justify-center">
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId1}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-  <div>
-  </div>
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId2}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
-  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-    <iframe
-      className="absolute top-0 left-0 w-full h-full"
-      src={`https://www.youtube.com/embed/${youtubeVideoId3}`}
-      title="Vídeo Programa SER"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  </div>
+  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src={`https://www.youtube.com/embed/${youtubeVideoId1}`}
+      title="Vídeo Programa SER"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+  <div>
+  </div>
+  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src={`https://www.youtube.com/embed/${youtubeVideoId2}`}
+      title="Vídeo Programa SER"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+  <div className="relative w-[320px] h-[568px] md:w-[360px] md:h-[640px] rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src={`https://www.youtube.com/embed/${youtubeVideoId3}`}
+      title="Vídeo Programa SER"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
 </div>
 
-    {/* BOTÃO CANAL */}
-    <div className="mt-10">
-      <a
-        href={youtubeChannelLink}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-block border border-slate-600 px-6 py-3 rounded-xl hover:border-emerald-400 transition"
-      >
-        Acessar Canal no YouTube
-      </a>
-    </div>
+    {/* BOTÃO CANAL */}
+    <div className="mt-10">
+      <a
+        href={youtubeChannelLink}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-block border border-slate-600 px-6 py-3 rounded-xl hover:border-emerald-400 transition"
+      >
+        Acessar Canal no YouTube
+      </a>
+    </div>
 
-  </div>
+  </div>
 </section>
-      {/* FORMATO */}
-      <section className="py-28 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-        <img
-          src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop"
-          alt="Reflexão"
-          className="rounded-3xl shadow-2xl"
-        />
+      {/* FORMATO */}
+      <section className="py-28 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <img
+          src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=800&q=80&auto=format&fit=crop"
+          alt="Reflexão"
+          className="rounded-3xl shadow-2xl"
+        />
 
-        <div>
-          <h2 className="text-3xl font-bold">Como Funciona</h2>
+        <div>
+          <h2 className="text-3xl font-bold">Como Funciona</h2>
 
-          <ul className="mt-10 space-y-4 text-slate-400 leading-relaxed">
-            <li>• Diagnóstico inicial de desafios e objetivos pessoais</li>
-            <li>• Sessões estruturadas de mentoria individual ou em grupo</li>
-            <li>• Aplicação prática no contexto real</li>
-            <li>• Plano de desenvolvimento contínuo</li>
-          </ul>
+          <ul className="mt-10 space-y-4 text-slate-400 leading-relaxed">
+            <li>• Diagnóstico inicial de desafios e objetivos pessoais</li>
+            <li>• Sessões estruturadas de mentoria individual ou em grupo</li>
+            <li>• Aplicação prática no contexto real</li>
+            <li>• Plano de desenvolvimento contínuo</li>
+          </ul>
 
-          <div className="mt-12 flex flex-wrap gap-6">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-emerald-500 px-7 py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition"
-            >
-              Conversar agora
-            </a>
+          <div className="mt-12 flex flex-wrap gap-6">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-emerald-500 px-7 py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition"
+            >
+              Conversar agora
+            </a>
 
-            <a
-              href="mailto:contato@programaser.com.br?subject=Quero saber mais sobre o Programa SER"
-              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
-            >
-              Enviar Email
-            </a>
-          </div>
-        </div>
-      </section>
+            <a
+              href="mailto:contato@programaser.com.br?subject=Quero saber mais sobre o Programa SER"
+              className="border border-slate-600 px-7 py-3 rounded-xl hover:border-emerald-400 transition"
+            >
+              Enviar Email
+            </a>
+          </div>
+        </div>
+      </section>
 
-      {/* CONTATO */}
-      <section id="contato" className="bg-slate-950 border-t border-slate-800 py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center">Contato</h2>
+      {/* CONTATO */}
+      <section id="contato" className="bg-slate-950 border-t border-slate-800 py-28">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center">Contato</h2>
 
-          <div className="mt-16 grid md:grid-cols-2 gap-12">
-            <ContactForm />
+          <div className="mt-16 grid md:grid-cols-2 gap-12">
+            <ContactForm />
 
-            <div className="space-y-6">
+            <div className="space-y-6">
 
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-emerald-500 px-6 py-4 rounded-xl text-center shadow-lg hover:bg-emerald-600 transition"
-              >
-                Falar via WhatsApp
-              </a>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="block bg-emerald-500 px-6 py-4 rounded-xl text-center shadow-lg hover:bg-emerald-600 transition"
+              >
+                Falar via WhatsApp
+              </a>
 
-              <a
-                href="https://www.linkedin.com/in/rafaelgaravello"
-                target="_blank"
-                rel="noreferrer"
-                className="block border border-slate-600 px-6 py-4 rounded-xl text-center hover:border-emerald-400 transition"
-              >
-                LinkedIn
-              </a>
+              <a
+                href="https://www.linkedin.com/in/rafaelgaravello"
+                target="_blank"
+                rel="noreferrer"
+                className="block border border-slate-600 px-6 py-4 rounded-xl text-center hover:border-emerald-400 transition"
+              >
+                LinkedIn
+              </a>
 
-              <div className="w-500 h-500mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center">
-                <img
-                  src="/images/SERIcon.png"
-                  className="w-full h-full object-cover"
-                /> 
-              </div>
+              <div className="w-500 h-500mx-auto rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center">
+                <img
+                  src="/images/SERIcon.png"
+                  className="w-full h-full object-cover"
+                /> 
+              </div>
 
-            </div>
-          </div>
+            </div>
+          </div>
 
-          <p className="mt-16 text-center text-sm text-slate-500">
-            Programa de mentoria voltado ao desenvolvimento pessoal e profissional.
-            Não se trata de atendimento clínico ou psicológico.
-          </p>
-        </div>
-      </section>
+          <p className="mt-16 text-center text-sm text-slate-500">
+            Programa de mentoria voltado ao desenvolvimento pessoal e profissional.
+            Não se trata de atendimento clínico ou psicológico.
+          </p>
+        </div>
+      </section>
 
-      {/* FOOTER */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-10 text-center text-slate-500 text-sm">
-        © {new Date().getFullYear()} Programa SER — Rafael Garavello
-      </footer>
+      {/* FOOTER */}
+      <footer className="bg-slate-950 border-t border-slate-800 py-10 text-center text-slate-500 text-sm">
+        © {new Date().getFullYear()} Programa SER — Rafael Garavello
+      </footer>
 
-    </div>
-  );
+    </div>
+  );
 }
